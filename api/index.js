@@ -9,7 +9,6 @@ const client = axios.create({
   },
 });
 
-// Add a response interceptor
 client.interceptors.response.use(
   (response) => {
     if (response.status === 200) {
@@ -17,8 +16,6 @@ client.interceptors.response.use(
     }
   },
   (error) => {
-    // Any status codes that falls outside the range of 2xx cause this function to trigger
-    // Do something with response error
     return Promise.reject(error);
   },
 );

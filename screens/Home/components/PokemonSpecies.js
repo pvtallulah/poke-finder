@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, ScrollView, StyleSheet, ActivityIndicator} from 'react-native';
+import {Text, StyleSheet, ActivityIndicator} from 'react-native';
 import PropTypes from 'prop-types';
 
 import client from '../../../api';
@@ -79,13 +79,6 @@ const PokemonSpecies = ({id}) => {
           </>
         )
       )}
-      {/* <ScrollView style={styles.scrollViewContainer}>
-        {abilities.map((a) => (
-          <Text key={a.ability.name} style={styles.ability}>
-            {a.ability.name}
-          </Text>
-        ))}
-      </ScrollView> */}
     </Card>
   );
 };

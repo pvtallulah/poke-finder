@@ -15,11 +15,6 @@ const PokemonMovements = ({movements}) => {
           </Text>
         ))}
       </ScrollView>
-      {/* <Row>
-        <Text>Exp base: </Text>
-        <Text>Peso: </Text>
-        <Text>Alto: </Text>
-      </Row> */}
     </Card>
   );
 };

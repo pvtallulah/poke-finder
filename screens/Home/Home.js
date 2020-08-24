@@ -5,7 +5,6 @@ import {
   View,
   StatusBar,
   Keyboard,
-  Text,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
@@ -20,7 +19,6 @@ import PokemonMovements from './components/PokemonMovements';
 import PokemonAbilities from './components/PokemonAbilities';
 import PokemonSpecies from './components/PokemonSpecies';
 import client from '../../api/';
-import Row from '../../components/Row';
 
 const Home = ({navigation}) => {
   const textboxRef = useRef(null);
