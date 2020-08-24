@@ -16,9 +16,23 @@ Proyecto de ejemplo utlilizando react-native y consumiendo la API de pokeapi.co,
 - react-native-safe-area-context
 - react-native-screens
 
-## Uso
+### Como instalar
+
+#### Clonar el repo
+
+```
+git clone https://github.com/pvtallulah/poke-finder
+```
+
+#### Instalar las dependencias
+
+```
+npm install
+```
+
+#### Iniciar react para android
 
 ```bash
-npm install
+
 npx react-native run-android
 ```
