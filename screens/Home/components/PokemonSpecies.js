@@ -109,4 +109,5 @@ const styles = StyleSheet.create({
     width: '33%',
   },
 });
+
 export default PokemonSpecies;
