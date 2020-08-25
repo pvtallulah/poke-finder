@@ -1,4 +1,3 @@
-// __tests__/Login-page-test.js
 import React from 'react';
 import 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
