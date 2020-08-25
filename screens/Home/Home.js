@@ -9,6 +9,8 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
+import * as pokemonAPI from '../../api/pokemonAPI';
+
 import Alert from '../../components/Alert';
 import Loader from '../../components/Loader';
 import Textbox from '../../components/Textbox';
@@ -18,7 +20,6 @@ import PokemonInfo from './components/PokemonInfo';
 import PokemonMovements from './components/PokemonMovements';
 import PokemonAbilities from './components/PokemonAbilities';
 import PokemonSpecies from './components/PokemonSpecies';
-import client from '../../api/';
 
 const Home = ({navigation}) => {
   const textboxRef = useRef(null);
@@ -40,7 +41,7 @@ const Home = ({navigation}) => {
   const getPokemonCount = async () => {
     try {
       setLoading(true);
-      const countData = await client.GET('/pokemon?count&limit=1');
+      const countData = await pokemonAPI.getPokemonCount();
       return countData.count;
     } catch (error) {
       setAlertText(error.message);
@@ -53,8 +54,8 @@ const Home = ({navigation}) => {
 
   const getAllPokemons = async (pokemonCount) => {
     try {
-      const pokemonList = await client.GET(`/pokemon?limit= ${pokemonCount}`);
-      return pokemonList;
+      const pokemonListRes = await pokemonAPI.getAllPokemons(pokemonCount);
+      return pokemonListRes;
     } catch (error) {
       setAlertText(error.message);
       setShowAlert(true);
@@ -70,7 +71,7 @@ const Home = ({navigation}) => {
     const pokemonId = pokemon.url.split('/')[6];
     try {
       setLoading(true);
-      const pokemonDataRes = await client.GET(`/pokemon/${pokemonId}/`);
+      const pokemonDataRes = await pokemonAPI.getPokemonData(pokemonId);
       setPokemonData(pokemonDataRes);
     } catch (error) {
       setAlertText(error.message);
