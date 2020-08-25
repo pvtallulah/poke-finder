@@ -36,3 +36,10 @@ npm install
 
 npx react-native run-android
 ```
+
+#### Realizar pruebas de renderizado simples con Jest
+
+```bash
+
+npm run test
+```
